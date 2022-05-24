@@ -47,10 +47,10 @@ func fetchArticles() {
 
 	result := reg.FindAllStringSubmatch(respBody, -1)
 
-	for _, text := range result {
+	for _, values := range result {
 
 		// 这里可以去除html元素和空格
-		title := trimHtml(text[1])
+		title := trimHtml(values[1])
 
 		fmt.Println(title)
 	}
